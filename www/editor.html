@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schermo</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/editor.css">
+</head>
+<body>
+    <div id="content">
+        <div id="header">
+            <h4>Schermo: X</h4>
+            <button id="returnButton">Indietro</button>
+        </div>
+        <div id="slideCarousel">
+        </div>
+        <div id="slideEditorArea">
+            <div id="slideEditor"></div>
+        </div>
+        <div id="controlPanel">
+            <div class="pulsantiera">
+                <input type="file" hidden id="fileSelector"/>
+                <button id="fileSelectorButton">Scegli un file</button>
+                <!--
+                <button id="Carica_Sfondo">Carica sfondo</button>
+                <button id="Carica_Miniatura">Carica miniatura</button>-->
+            </div>
+            <div class="screenControls">
+                <div class="durationSetter">
+                    <input type="number" id="timeInput" placeholder="durata slide" class="userInteract">
+                    <button id="saveTime"></button>
+                </div>
+
+                <button id="toggleTime">Avvia Timer</button>
+
+                <select name="ratio" class="userInteract" id="aspectRatioChanger">
+                    <option value="16/9">16:9</option>
+                    <option value="4/3">4:3</option>
+                    <option value="9/16">9:16</option>
+                    <option value="1/1">1:1</option>
+                    <option value="5/3">5:3</option>
+                </select>
+                <select name="overflow" class="userInteract" id="overflowBVRchanger">
+                    <option value="ritaglia">Ritaglia</option>
+                    <option value="riduci">Riduci</option>
+                    <option value="adatta">Adatta</option>
+                </select>
+                <div>
+                    <input type="checkbox" id="slideLoop">
+                    <label for="slideLoop">Loop delle slide</label>
+                </div>
+            </div>
+            <div class="controlArea">
+                <button class="cliccabile" id="backwardControl"></button>
+                <button class="cliccabile" id="fowardControl"></button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"
+            integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+"
+            crossorigin="anonymous">
+    </script>
+    <script src="assets/js/index.js" defer></script>
+    <script src="assets/js/layout.js" defer></script>
+    <script src="assets/js/loadFiles.js" defer></script>
+    <script src="assets/js/controller.js" defer></script>
+</body>
+</html>

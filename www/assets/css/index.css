@@ -1,0 +1,61 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+body{
+    flex-direction: column;
+    
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root{
+    --color1: #003366;
+    --color2: #336699;
+    --color3: #6699cc;
+    --color4: #99CCFF;
+    --color5: #99CCCC;
+    --color6: #F0F8FF;
+    --loadColor: #48c048;
+    --trasparentBack: #00112299;
+    --AR_width: 16;
+    --AR_height: 9;
+    --overflowState: cover;
+}
+
+button:hover:not(.disabled){
+    filter: drop-shadow(0 0 10px var(--color2));
+}
+button:active:not(.disabled){
+    filter: brightness(150%)
+}
+.forceHidden{
+    display: none !important;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+background: var(--color5);
+}
+::-webkit-scrollbar-thumb {
+background: var(--color3)
+}
+::-webkit-scrollbar-thumb:hover {
+background: var(--color2);
+}
+
+@font-face {
+    font-family: main;
+    src: url("../fonts/Nunito-Bold.ttf");
+}
